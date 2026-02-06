@@ -26,8 +26,8 @@ Cuando una base contiene múltiples filas por correo (cliente) y VIN, esta macro
 - output/ incluye capturas del input/output 
 
 ## Uso
-1. Abrir el archivo de demo en demo/
-2. Importar src/correosXnumVINs.bas en el Editor VBA (Alt + F11)
+1. Abrir el archivo de data/
+2. Importar src/CorreosPorNumeroVINs.bas en el Editor VBA (Alt + F11)
 3. Ejecutar la macro CorreosPorNumeroVINs
 4. Seguir los cuadros de diálogo (rango base, N, celda de salida)
 
