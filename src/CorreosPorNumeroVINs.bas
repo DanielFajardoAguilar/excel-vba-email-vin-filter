@@ -1,4 +1,4 @@
-Attribute VB_Name = "Módulo1"
+Attribute VB_Name = "MÃ³dulo1"
 Option Explicit
 
 Public Sub CorreosPorNumeroVINs()
@@ -34,14 +34,14 @@ Public Sub CorreosPorNumeroVINs()
     filaInicioDatos = celdaInicioBase.Row
     
     ' =========================
-    ' 2) Preguntar cuántos VINs se buscan
+    ' 2) Preguntar cuÃ¡ntos VINs se buscan
     ' =========================
     numeroVINsBuscados = CLng(Application.InputBox( _
-        Prompt:="¿Cuántos VINs EXACTOS por correo deseas filtrar?", _
-        Title:="Filtro por número de VINs", Default:=2, Type:=1))
+        Prompt:="Â¿CuÃ¡ntos VINs EXACTOS por correo deseas filtrar?", _
+        Title:="Filtro por nÃºmero de VINs", Default:=2, Type:=1))
     
     If numeroVINsBuscados <= 0 Then
-        MsgBox "El número de VINs debe ser mayor que cero.", vbExclamation
+        MsgBox "El nÃºmero de VINs debe ser mayor que cero.", vbExclamation
         Exit Sub
     End If
     
@@ -50,15 +50,15 @@ Public Sub CorreosPorNumeroVINs()
     ' =========================
     On Error Resume Next
     Set celdaInicioResultado = Application.InputBox( _
-        Prompt:="Selecciona la celda donde comenzará la HOJA RESULTADO.", _
-        Title:="Ubicación del resultado", Type:=8)
+        Prompt:="Selecciona la celda donde comenzarÃ¡ la HOJA RESULTADO.", _
+        Title:="UbicaciÃ³n del resultado", Type:=8)
     On Error GoTo 0
     If celdaInicioResultado Is Nothing Then Exit Sub
     
     Set wsResultado = celdaInicioResultado.Worksheet
     
     ' =========================
-    ' 4) Detectar última fila de datos
+    ' 4) Detectar Ãºltima fila de datos
     ' =========================
     filaUltimoDato = wsBaseDatos.Cells(wsBaseDatos.Rows.Count, colCorreo).End(xlUp).Row
     If filaUltimoDato < filaInicioDatos Then
@@ -92,7 +92,7 @@ Public Sub CorreosPorNumeroVINs()
     Next fila
     
     ' =========================
-    ' 6) Limpiar área de salida
+    ' 6) Limpiar Ã¡rea de salida
     ' =========================
     Dim filaInicioResultado As Long
     Dim colInicioResultado As Long
@@ -152,7 +152,7 @@ Public Sub CorreosPorNumeroVINs()
 End Sub
 
 ' =========================
-' Función auxiliar: validar duplicados de VIN
+' FunciÃ³n auxiliar: validar duplicados de VIN
 ' =========================
 Private Function ExisteVIN(ByVal listaVINs As Object, ByVal vinBuscado As String) As Boolean
     Dim idx As Long
